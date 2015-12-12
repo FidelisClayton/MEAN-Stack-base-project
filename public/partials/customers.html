@@ -1,0 +1,46 @@
+<div class="jumbotron" ng-init="getCustomers()">
+	<h1>Customers</h1>
+</div>
+
+<div class="content">
+	<table class="table table-hover">
+		<thead>
+			<th>Nome</th>
+			<th>Telefone</th>
+			<th>Idade</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<input type="text" class="form-control" ng-model="customer.name"placeholder="Nome">
+				</td>
+				<td>
+					<input type="text" class="form-control" mask="(99) 99999?-9999" ng-model="customer.phone"placeholder="Telefone">
+				</td>
+				<td>
+					<input type="text" class="form-control" ng-model="customer.age"placeholder="Idade">
+				</td>
+				<td>
+					<button ng-if="!ui.editando" class="btn btn-primary" ng-click="postCustomer(customer)">Adicionar</button>
+					<button ng-if="ui.editando" class="btn btn-primary" ng-click="putCustomer(customer._id, customer)">Atualizar</button>
+				</td>
+			</tr>
+			<tr ng-repeat="customer in customers" style="cursor: pointer">
+				<td ng-click="openCustomer(customer._id)">
+					<label>{{customer.name}}</label>
+				</td>
+				<td ng-click="openCustomer(customer._id)">
+					<label>{{customer.phone}}</label>
+				</td>
+				<td ng-click="openCustomer(customer._id)">
+					<label>{{customer.age}}</label>
+				</td>
+				<td>
+					<button class="btn btn-info" ng-click="toggleEditar(customer)">Editar</button>
+					<button class="btn btn-danger" ng-click="deleteCustomer(customer._id)">Deletar</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

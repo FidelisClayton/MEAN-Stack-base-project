@@ -1,0 +1,19 @@
+{
+  "name": "MEAN Stack base project",
+  "version": "0.0.1",
+  "authors": [
+    "Clayton Fidelis <clayton.fidelis@live.com>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "ngMask": "angular-mask#~3.0.16"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "MEAN Stack base project",
+  "version": "0.0.1",
+  "description": "Base para aplicações mongodb, node, express e api rest.",
+  "main": "server.js",
+  "author": "Clayton Fidelis <clayton.fidelis@live.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "~1.14.1",
+    "express": "~4.13.3",
+    "express-load": "~1.1.15",
+    "mongoose": "~4.2.5",
+    "mongoose-findorcreate": "~0.1.2"
+  }
+}
